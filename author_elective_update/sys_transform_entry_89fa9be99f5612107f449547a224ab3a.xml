@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Import Historic NeedIt Data">a01917699f5612107f449547a224ab89</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[// If the source data does not have a u_requested_for_email field, 
+  // create the target email address from the Requested for value.  Email addresses 
+  // have the format firstname.lastname@example.com.  Convert the u_requested_for 
+  // value to lowercase.  Replace the space with a . and concatenate with 
+  // @example.com
+  if(!("u_requested_for_email" in source)){
+    var emailname = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = emailname.replace(" ", ".") + "@example.com";
+  }]]></source_script>
+        <source_table>x_58872_needit_history_needit_data</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-06 04:47:56</sys_created_on>
+        <sys_id>89fa9be99f5612107f449547a224ab3a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_transform_entry_89fa9be99f5612107f449547a224ab3a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-06 04:52:02</sys_updated_on>
+        <target_field>u_requested_for_email</target_field>
+        <target_table>x_58872_needit_needit</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>7ca11a41931e1a18abcff0d56aba10e0</instance_id>
+        <instance_name>nowlearning-nlinst02279655-0001</instance_name>
+        <name>sys_transform_entry_89fa9be99f5612107f449547a224ab3a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;&lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;&lt;choice_action&gt;create&lt;/choice_action&gt;&lt;coalesce&gt;false&lt;/coalesce&gt;&lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;&lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;&lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;&lt;map display_value="Import Historic NeedIt Data"&gt;a01917699f5612107f449547a224ab89&lt;/map&gt;&lt;reference_value_field/&gt;&lt;source_field&gt;[Script]&lt;/source_field&gt;&lt;source_script&gt;&lt;![CDATA[// If the source data does not have a u_requested_for_email field, 
+  // create the target email address from the Requested for value.  Email addresses 
+  // have the format firstname.lastname@example.com.  Convert the u_requested_for 
+  // value to lowercase.  Replace the space with a . and concatenate with 
+  // @example.com
+  if(!("u_requested_for_email" in source)){
+    var emailname = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = emailname.replace(" ", ".") + "@example.com";
+  }]]&gt;&lt;/source_script&gt;&lt;source_table&gt;x_58872_needit_history_needit_data&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-06 04:47:56&lt;/sys_created_on&gt;&lt;sys_id&gt;89fa9be99f5612107f449547a224ab3a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;[Script]&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_entry_89fa9be99f5612107f449547a224ab3a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-06 04:52:02&lt;/sys_updated_on&gt;&lt;target_field&gt;u_requested_for_email&lt;/target_field&gt;&lt;target_table&gt;x_58872_needit_needit&lt;/target_table&gt;&lt;use_source_script&gt;true&lt;/use_source_script&gt;&lt;/sys_transform_entry&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1767356859</payload_hash>
+        <record_name>[Script]</record_name>
+        <reverted_from/>
+        <source>5d089ba59f5612107f449547a224abac</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-06 04:52:02</sys_created_on>
+        <sys_id>7dfb9b2d9f5612107f449547a224abd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1939a4f847a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-06 04:52:02</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>75fb9b2d605612109d93bd51dc5f72d1</update_guid>
+        <update_guid_history>75fb9b2d605612109d93bd51dc5f72d1:-1767356859,e10b9be959561210294fc6a4473af7f8:1417130993</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-06 04:56:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>20e1a4a2ca20495998be5cb931d1a201</sys_id>
+        <sys_metadata>89fa9be99f5612107f449547a224ab3a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_89fa9be99f5612107f449547a224ab3a</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_89fa9be99f5612107f449547a224ab3a">7dfb9b2d9f5612107f449547a224abd1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-06 04:56:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
